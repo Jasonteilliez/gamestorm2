@@ -1,0 +1,426 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Cormorant Infant", serif;
+  background-color: #be7f19;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  overflow-x: hidden;
+}
+a {
+  text-decoration: underline;
+  transition: 0.3s;
+  color: black;
+}
+a:hover {
+  color: rgb(196, 184, 52);
+  text-shadow: -3px 0 5px rgb(20, 20, 20), 0 3px 5px rgb(20, 20, 20),
+    3px 0 5px rgb(20, 20, 20), 0 -3px 5px rgb(20, 20, 20);
+}
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+main {
+  margin: 0px auto 50px auto;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+}
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #be7f19;
+  color: #f3d594;
+}
+hr {
+  border: solid black 1px;
+  margin: 20px 0;
+}
+#nav {
+  display: flex;
+}
+#logo_image {
+  height: 50px;
+  transition: 0.3s;
+}
+#logo_image:hover {
+  transform: scale(1.1);
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  margin: 0 30px;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+.header_avatar {
+  width: 50px;
+  height: 50px;
+}
+#banniere {
+  background-image: url("../img/banniere.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin: 30px 0;
+}
+#Page404 p {
+  text-align: center;
+}
+/********************************************************************************************************************/
+/******************************************************** FLASH MESSAGE *********************************************/
+/********************************************************************************************************************/
+.flash_error {
+  color: #641220;
+  background-color: #e01e3775;
+}
+.flash_success {
+  color: #004b23;
+  background-color: #70e00075;
+}
+.flash_error,
+.flash_success {
+  font-size: 2em;
+  padding: 5px 10px;
+}
+.displayNone {
+  display: none;
+}
+/********************************************************************************************************************/
+/********************************************************* INSCRIPTION **********************************************/
+/********************************************************************************************************************/
+#formulaire > div {
+  width: 600px;
+  margin: auto;
+}
+#formulaire label {
+  display: block;
+  font-size: 1.3em;
+}
+input {
+  padding: 5px 5px 5px 10px;
+  width: 100%;
+  border-radius: 20px;
+  color: black;
+}
+#flex_champ {
+  display: flex;
+  justify-content: space-between;
+}
+#flex_champ div {
+  width: 49%;
+}
+#formulaire form > div {
+  margin: 10px 0;
+}
+.alert {
+  color: red;
+}
+#checkboxrgpd {
+  display: flex;
+  align-items: flex-start;
+}
+#checkboxrgpd input {
+  margin-top: 5px;
+  margin-right: 10px;
+  width: fit-content;
+}
+/********************************************************************************************************************/
+/*********************************************************** PROFIL *************************************************/
+/********************************************************************************************************************/
+#profil_picture {
+  width: 100px;
+  height: 100px;
+}
+#profil p {
+  font-size: 1.5em;
+}
+#profil span {
+  font-weight: 600;
+}
+#profil h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+#profil #profil_lien {
+  margin: 20px 0;
+}
+#profil > div {
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+}
+#profil_info {
+  background-color: #00000020;
+  border: solid 2px black;
+  width: fit-content;
+  padding: 0 20px;
+}
+#avatar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-right: 50px;
+}
+#information_personnelle {
+  padding: 20px;
+}
+input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+input[type="file"] + label {
+  padding: 5px 20px;
+  display: inline-block;
+  background-color: #ffffff00;
+  transition: 0.3s;
+  cursor: pointer;
+}
+input[type="file"]:focus + label,
+input[type="file"] + label:hover {
+  background-color: #d9d9d9d2;
+}
+.del_user a {
+  color: rgb(175, 0, 0);
+  text-shadow: none;
+  transition: 0.3s;
+}
+.del_user a:hover {
+  color: red;
+}
+#profilScoreboard table {
+  background-color: #00000020;
+  border-collapse: collapse;
+  border: solid 2px #b5b5b57a;
+}
+#profilScoreboard th {
+  font-size: 2.2em;
+  font-weight: 600;
+  padding: 5px 20px;
+  border-right: solid 2px #b5b5b57a;
+}
+#profilScoreboard td {
+  text-align: center;
+  padding: 5px 10px;
+  border-right: solid 2px #b5b5b57a;
+}
+
+#profilScoreboard tr:nth-child(2n) {
+  background-color: #00000020;
+}
+#profilScoreboard tr:nth-child(2n + 1) {
+  background-color: #ffffff20;
+}
+#profilScoreboard tr:first-child {
+  background-color: #b5b5b57a !important;
+}
+/********************************************************************************************************************/
+/*********************************************************** GAME ***************************************************/
+/********************************************************************************************************************/
+#main_game {
+  display: flex;
+  justify-content: center;
+}
+#main_game > div {
+  margin: 0 5px;
+}
+#game {
+  order: 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#game_control,
+#info_score {
+  padding: 10px;
+  border: solid;
+  max-width: 300px;
+  min-width: 200px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#game_control {
+  order: 1;
+}
+#info_score {
+  order: 3;
+}
+#game_control button {
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+#canvasgame {
+  border: solid;
+}
+#start {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  display: none;
+}
+#start.active {
+  display: block;
+}
+#main_game h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+/******************************************************** pong ******************************************************/
+#game_control button#nbrjoueurswitch {
+  display: block;
+  margin: auto;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+#nbrjoueuraffiche {
+  text-align: center;
+}
+
+/********************************************************************************************************************/
+/********************************************************* ACCUEIL **************************************************/
+/********************************************************************************************************************/
+#game_liste {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1900px;
+  padding: 10px;
+  margin: 0px auto 50px auto;
+}
+#game_liste .game_all {
+  margin: 20px;
+  width: 45%;
+  padding: 20px 0;
+  display: flex;
+  border: solid 2px black;
+  background-color: #00000020;
+  padding: 20px;
+}
+.link_mini {
+  width: 49%;
+}
+.game_miniature {
+  width: 100%;
+  transition: 0.3s;
+}
+.game_miniature:hover {
+  transform: scale(1.05);
+}
+.game_info {
+  padding-left: 15px;
+  width: 49%;
+}
+.game_desc h3 {
+  text-align: center;
+  font-size: 1.5em;
+}
+.game_desc p {
+  padding: 20px 0;
+}
+
+.rank_score {
+  font-size: 1.2em;
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+}
+#accueil .top_score {
+  text-align: center;
+  font-size: 1.5em;
+}
+.top3_rank {
+  font-weight: 600;
+}
+.medal0 {
+  color: gold;
+}
+.medal1 {
+  color: silver;
+}
+.medal2 {
+  color: #ad5a38;
+}
+
+/********************************************************************************************************************/
+/********************************************************** Footer **************************************************/
+/********************************************************************************************************************/
+footer {
+  margin-top: 100px;
+  max-width: 1400px;
+  margin: 70px auto 0;
+}
+footer div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer div img {
+  width: 150px;
+}
+/********************************************************************************************************************/
+/******************************************************** responsive ************************************************/
+/********************************************************************************************************************/
+@media screen and (max-width: 1500px) {
+  .game_all {
+    flex-direction: column;
+  }
+  .link_mini {
+    width: 100%;
+  }
+  .game_info {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  #main_game {
+    margin: auto;
+    width: 806px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #game {
+    order: 1;
+    margin: 0 0 15px 0 !important;
+  }
+  #game_control {
+    order: 2;
+    width: 49%;
+    max-width: none;
+    margin: 0 !important;
+  }
+  #info_score {
+    order: 3;
+    width: 49%;
+    max-width: none;
+    margin: 0 !important;
+  }
+}

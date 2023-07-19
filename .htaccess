@@ -1,0 +1,43 @@
+AddDefaultCharset "utf-8"
+
+##
+
+## INTERDIT L'ACCÈS AU FICHIER .HTACCESS
+
+##
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+##
+
+## POUR RÉÉCRIRE LES NOMS DES PAGES
+
+##
+
+Options +FollowSymlinks -MultiViews
+
+RewriteEngine on
+RewriteBase /
+
+##
+
+## POUR RÉÉCRIRE LES D'URL
+
+##
+
+RewriteRule ^Jeu/chickendrun$ index.php?action=page_jeux&jeu=chickendrun [L]
+RewriteRule ^Jeu/flappy_owl$ index.php?action=page_jeux&jeu=flappy_owl [L]
+RewriteRule ^Jeu/Pong$ index.php?action=page_jeux&jeu=Pong [L]
+
+RewriteRule ^Accueil$ index.php?action=page_accueil [L]
+RewriteRule ^Inscription$ index.php?action=page_inscription [L]
+RewriteRule ^Connexion$ index.php?action=page_connexion [L]
+RewriteRule ^Profil$ index.php?action=page_profil [L]
+RewriteRule ^Profil/Edition$ index.php?action=page_edition_profil [L]
+RewriteRule ^Profil/Password$ index.php?action=page_edition_password [L]
+RewriteRule ^Admin$ index.php?action=page_admin [L]
+
+ErrorDocument 404 /404.php
